@@ -1,0 +1,66 @@
+@font-face {
+    font-family: myFont;
+    src: url(pusab.otf);
+}
+
+body {
+  background-image: url("bg.png");
+  background-size: stretch;
+  background-color: black;
+  font-family: myFont;
+  color: #040b38;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+.img {
+  height: 183.95px;
+}
+
+.social {
+    width: 16px;
+}
+
+.containerdiv {
+  display: flex;
+  justify-content: center;
+}
+
+.section {
+  background-color: rgba(0, 0, 0, 0.25);
+  margin: 10px;
+  padding: 10px;
+
+  border-radius: 10px;
+  border-style:ridge;
+  border-width: 5px;
+  border-color: white;
+}
+
+#raccoon {
+  width: 500px;
+  height: 200px;
+}
+
+#doggieimg {
+    width: 142px;
+}
+
+.list {
+  padding-left: 40px;
+}
+
+#door {
+  position: fixed;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(-1);
+}
+
+#doorimg {
+  width: 124.2px;
+  height: auto
+}
+
+#cellar {
+  margin-top: -25px;
+}
