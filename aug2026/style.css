@@ -1,0 +1,64 @@
+@font-face {
+  font-family: myFont;
+  src: url(comic.ttf);
+}
+
+body {
+  color: white;
+  text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
+  background-image: url("https://i.redd.it/jmhixcqthtfg1.jpeg");
+  background-size: cover;
+  background-color: black;
+  font-family: myFont;
+  margin: 0;
+  padding: 0;
+}
+
+#raccoon {
+  width: 500px;
+  height: 200px;
+}
+
+#doggieimg {
+    width: 142px;
+}
+
+.img {
+  height: 183.95px;
+}
+
+.social {
+    width: 16px;
+}
+
+.containerdiv {
+  display: flex;
+  justify-content: center;
+}
+
+.section {
+  background-color: rgba(0, 0, 0, 0.500);
+  margin: 10px;
+  padding: 10px;
+
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: white;
+}
+
+#door {
+  position: fixed;
+  bottom: -5px;
+  right: 0;
+}
+
+#doorimg {
+  width: 124.2px;
+  height: auto
+}
+
+#disc {
+  width: 640;
+  height: 640;
+}
