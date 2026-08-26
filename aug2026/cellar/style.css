@@ -5,7 +5,7 @@
 
 body {
   background-image: url("bg.png");
-  background-size: stretch;
+  background-size: cover;
   background-color: black;
   font-family: myFont;
   color: #040b38;
@@ -14,12 +14,21 @@ body {
 
 .img {
   height: 183.95px;
+  transition: 250ms;
+}
+
+.img:hover {
+  transform: scale(110%);
 }
 
 .social {
-    width: 16px;
+  width: 16px;
+  transition: 250ms;
 }
 
+.social:hover {
+  transform: scale(110%);
+}
 .containerdiv {
   display: flex;
   justify-content: center;
@@ -63,4 +72,39 @@ body {
 
 #cellar {
   margin-top: -25px;
+}
+
+#disc {
+  width: 200px;
+  height: auto;
+  animation: discRotate 140s linear infinite;
+  transition: 250ms;
+}
+
+#disc:hover {
+  transform: scale(110%);
+}
+
+@keyframes discRotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+#artist {
+  margin-top: -20px;
+}
+
+#playing {
+  margin-bottom: -19px;
+}
+
+#music {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+#musicinfo {
+  text-align: right;
+  align-self: center;
 }
