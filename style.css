@@ -10,6 +10,8 @@ TIP: This is the default style sheet for the site
 START Page structure and element resets
 ******************************************************************************/
 
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap");
+
 /* A set of default style */
 :root {
   /* Generic sizing for the page */
