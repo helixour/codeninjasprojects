@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://helixour.github.io/index_files/raccoon pfp.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!--PWA requirements-->
+  <meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" href="https://helixour.github.io/index_files/raccoon pfp.png">
+
+  <!-- PWA setup - update public/sw.js if you add your own assets like a new .css file -->
+  <script>
+    if (location.protocol == "http:") location.protocol = "https:";
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("sw.js")
+        .then((reg) => console.log("Service Worker registered", reg))
+        .catch((err) =>
+          console.error("Service Worker **not** registered", err)
+        );
+    } else {
+      console.warn("Service Worker not supported in this browser");
+    }
+  </script>
+
+  <!-- templates/head.js will fill in here -->
+  <script type="module" crossorigin="" src="shootingspree_files/index-69d380da.js"></script>
+  <title>Shooting Spree</title><!-- OpenGraph/Social sharing -->
+  <meta name="description">
+  <meta name="og:description">
+  <meta property="og:image" content="https://helixour.github.io/index_files/raccoon pfp.png">
+  <meta property="og:title" content="Code Ninjas Projects">
+  <meta name="twitter:card" content="summary"><!-- Load our custom theme -->
+  <link rel="stylesheet" type="text/css" href="menu.css">
+</head>
+
+<body cz-shortcut-listen="true">
+  <main>
+    <div class="wrapper" id="wrapper">
+      <div id="content" class="content">
+        <div>
+        
+          <h1>Code Ninjas Projects</h1>
+
+        </div>
+        <ul class="link-list">
+            
+          <li class="aug2026">
+            <a href="/aug2026/">
+              <span>Website: August 24th-28th</span>
+            </a>
+          </li>
+          
+        </ul>
+        <footer class="footer"></footer>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
