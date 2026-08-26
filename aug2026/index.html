@@ -4,6 +4,11 @@
         <title>Michael's awesome website</title>
         <link rel="icon" type="image/png" href="https://helixour.github.io/index_files/rockin%20raccoon%20pfp.png">
         <link rel="stylesheet" href="style.css">
+
+        <audio id="squishSfx">
+            <source src="squish.mp3" type="audio/mpeg">
+        </audio>
+
         <script src="script.js"></script>
         <meta charset="UTF-8">
         <meta name="description" content="Michael's awesome website">
@@ -16,7 +21,7 @@
             <header>
                 <center>
                     <h1>Raccoons are awesome!</h1>
-                    <img id="raccoon" src="https://helixour.github.io/index_files/rockin%20raccoon%20pfp.png" alt="an awesome raccoon with sunglasses and a guitar smiling">
+                    <img onclick="squish()" id="raccoon" src="https://helixour.github.io/index_files/rockin%20raccoon%20pfp.png" alt="an awesome raccoon with sunglasses and a guitar smiling">
                 </center>
             </header>
         </div>
@@ -45,7 +50,7 @@
                         </ul>
                 </details><br>
                 <center>
-                    <img id="doggieimg" src="https://media.tenor.com/3Po1DPkwHokAAAAM/doggie-gd-doggie-meme.gif" alt="doggie gd">
+                    <img id="wow" src="https://media.tenor.com/3Po1DPkwHokAAAAM/doggie-gd-doggie-meme.gif" alt="doggie gd">
                     <img class="img" src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUydGlyanN3eDVvb25ha2cwd2R5anJ0YmQ5ZnNjdzEyNHI4aGdscmg0NyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/oSSu2d1A29TeQ3T0On/200.gif" alt="raccoon eating cheetos gif">
                     <img class="img" src="https://media.tenor.com/-57zMbx4Vf8AAAAM/code-ninjas-ninja.gif" alt="code ninja">
                     <img class="img" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnBmYzh3MDI3bTFucDB0ZzAyZGdqaXV1Mzk2OHBzdWE3eWM1cG1reSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QQLwBB5O7I0YcgK8qw/giphy.gif" alt="jimothy the raccoon">
@@ -58,9 +63,13 @@
         </div>
 
         <div class="containerdiv">
-            <div class="section">
-                <img id="disc" src="" alt="a disk placeholder">
-                Now Playing
+            <div id="music" class="section">
+                <img id="disc" src="tf2_disk.png" alt="a rotating disk">
+                <div id="musicinfo">
+                    <p id="playing">Now Playing</p>
+                    <h3>Soldier of Dance</h3>
+                    <p id="artist">by Valve Studio Orchestra</p>
+                </div>
             </div>
         </div>
 
@@ -87,16 +96,16 @@
 
                         <a href="https://helixour.github.io/" target="_blank"><img class="social" alt="Website" src="https://raw.githubusercontent.com/paulrobertlloyd/socialmediaicons/refs/heads/main/website-16x16.png"></a>
 
-                        <audio autoplay loop>
-                            <source src="Soldier_of_Dance.mp3" type="audio/mpeg">
-                        </audio>
-
                     </footer>
                 </center>
             </div>
         </div>
 
         <a id="door" style="color: white;" href="cellar/index.html"><img id="doorimg" src="cellardoor.png"></a>
+
+        <audio autoplay loop>
+            <source src="Soldier_of_Dance.mp3" type="audio/mpeg">
+        </audio>
 
     </body>
 </html>

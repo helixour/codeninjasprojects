@@ -17,18 +17,34 @@ body {
 #raccoon {
   width: 500px;
   height: 200px;
+  transition: 250ms;
 }
 
-#doggieimg {
-    width: 142px;
+#raccoon:hover {
+  transform: scale(110%);
+}
+
+#wow {
+  width: 142px;
+  transition: 500ms;
 }
 
 .img {
   height: 183.95px;
+  transition: 250ms;
+}
+
+.img:hover, #wow:hover {
+  transform: scale(110%);
 }
 
 .social {
-    width: 16px;
+  width: 16px;
+  transition: 250ms;
+}
+
+.social:hover {
+  transform: scale(110%);
 }
 
 .containerdiv {
@@ -51,6 +67,7 @@ body {
   position: fixed;
   bottom: -5px;
   right: 0;
+  transition: 250ms;
 }
 
 #doorimg {
@@ -59,6 +76,57 @@ body {
 }
 
 #disc {
-  width: 640;
-  height: 640;
+  width: 200px;
+  height: auto;
+  animation: discRotate 69s linear infinite;
+  transition: 250ms;
+}
+
+@keyframes discRotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+#artist {
+  margin-top: -20px;
+}
+
+#playing {
+  margin-bottom: -19px;
+}
+
+#music {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+#musicinfo {
+  text-align: right;
+  align-self: center;
+}
+
+.animateRaccoon {
+  animation: squish 250ms ease-in-out;
+}
+
+@keyframes squish {
+  0% {
+    transform: scale(100%);
+  }
+  12.5% {
+    transform: scale(50%);
+  }
+  25% {
+    transform: scale(25%);
+  }
+  50% {
+    transform: scale(50%);
+  }
+  75% {
+    transform: scale(125%);
+  }
+  100% {
+    transform: scale(100%);
+  }
 }
