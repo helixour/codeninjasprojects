@@ -1,0 +1,73 @@
+@font-face {
+    font-family: myFont;
+    src: url("Super Bouncer.ttf");
+}
+
+body {
+    background-color: cornflowerblue;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: myFont;
+    color: white;
+    text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
+    margin: 0;
+    padding: 0;
+}
+
+#raccoon {
+    transition: 250ms;
+}
+
+@media (max-width: 750px) {
+    #raccoon {
+        width: 75%;
+    }
+    body {
+        background-size: cover;
+        
+    }
+}
+
+@media (max-width: 638.4px) {
+    body {
+        background-image: url("");
+    }
+}
+
+#raccoon:hover {
+    transform: scale(110%) rotate(-5deg);
+}
+
+.section {
+    background-color: #196cff;
+    margin: 2px;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    outline: 2.5px solid black;
+}
+
+.containerdiv {
+    display: flex;
+    justify-content: center;
+}
+
+#arrow {
+    width: 64px;
+    height: 64px;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    transition: 250ms;
+}
+
+#arrow:hover {
+    transform: scale(110%) rotate(-370deg);
+}
