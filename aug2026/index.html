@@ -2,20 +2,27 @@
 <html>
     <head>
         <title>Michael's awesome website</title>
+
         <link rel="icon" type="image/png" href="https://helixour.github.io/index_files/rockin%20raccoon%20pfp.png">
         <link rel="stylesheet" href="style.css">
+
+        <audio id="mainMusic" autoplay loop>
+            <source src="Soldier_of_Dance.mp3" type="audio/mpeg">
+        </audio>
 
         <audio id="squishSfx">
             <source src="squish.mp3" type="audio/mpeg">
         </audio>
 
         <script src="script.js"></script>
+
         <meta charset="UTF-8">
         <meta name="description" content="Michael's awesome website">
         <meta name="keywords" content="raccoon, michael, helixour">
         <meta name="author" content="Michael / Helixour">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
+
     <body>
         <div id="intro">
             <header>
@@ -28,6 +35,7 @@
 
         <div class="containerdiv">
             <div class="section">
+
                 <details>
                     <summary><b style="color: red;">RACCOON FUN FACTS!</b></summary>
                         <ul>
@@ -40,6 +48,7 @@
                             <li><b><i>they are amazing</i></b></li>
                         </ul>
                 </details>
+
                 <details>
                     <summary><b style="color: red;">WHY I LIKE THEM</b></summary>
                         <ul>
@@ -49,6 +58,7 @@
                             <li><b><i>they are amazing (again for dramatic effect)</i></b></li>
                         </ul>
                 </details><br>
+
                 <center>
                     <img id="wow" src="https://media.tenor.com/3Po1DPkwHokAAAAM/doggie-gd-doggie-meme.gif" alt="doggie gd">
                     <img class="img" src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUydGlyanN3eDVvb25ha2cwd2R5anJ0YmQ5ZnNjdzEyNHI4aGdscmg0NyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/oSSu2d1A29TeQ3T0On/200.gif" alt="raccoon eating cheetos gif">
@@ -59,12 +69,14 @@
                     <img class="img" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTNlM3lhejExMTBuMng1a3JiZzBkNHVtYzNqMjA0NzB1cXh2eWFyNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RXw0okEq6FL1DWWAtA/giphy.gif" alt="cartoony walking raccoon">
                     <img class="img" src="raccoon_pet.gif" alt="raccoon getting pet"><br>
                 </center>
+                
             </div>
         </div>
 
         <div class="containerdiv">
             <div id="music" class="section">
                 <img id="disc" src="tf2_disk.png" alt="a rotating disk">
+                
                 <div id="musicinfo">
                     <p id="playing">Now Playing</p>
                     <h3>Soldier of Dance</h3>
@@ -101,11 +113,11 @@
             </div>
         </div>
 
+        <a id="clicker" style="color: white;" href="clicker/index.html"><img id="doorimg" src="clicker/raccoon.png"></a>
+
         <a id="door" style="color: white;" href="cellar/index.html"><img id="doorimg" src="cellardoor.png"></a>
 
-        <audio autoplay loop>
-            <source src="Soldier_of_Dance.mp3" type="audio/mpeg">
-        </audio>
+        <a id="mute" onclick="mute()"><img src="playing.png"></a>
 
     </body>
 </html>

@@ -20,6 +20,19 @@ body {
   transition: 250ms;
 }
 
+@media (max-width: 525px) {
+  #raccoon {
+    width: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    background-image: url("https://i.pinimg.com/564x/75/f2/09/75f209d479156126f5612fab7a3551c0.jpg");
+    background-size: cover;
+  }
+}
+
 #raccoon:hover {
   transform: scale(110%);
 }
@@ -75,11 +88,22 @@ body {
   height: auto
 }
 
+#mute {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  transition: 250ms;
+}
+
+#mute:hover {
+  transform: scale(110%);
+}
+
 #disc {
   width: 200px;
   height: auto;
-  animation: discRotate 69s linear infinite;
   transition: 250ms;
+  animation: discRotate 69s linear infinite;
 }
 
 @keyframes discRotate {
@@ -129,4 +153,15 @@ body {
   100% {
     transform: scale(100%);
   }
+}
+
+#clicker {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  transition: 250ms;
+}
+
+#clicker:hover {
+  transform: scale(110%) rotate(-5deg);
 }

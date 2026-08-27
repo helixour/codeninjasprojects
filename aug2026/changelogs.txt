@@ -1,0 +1,7 @@
+Day 4:
+    - Made this file
+    - Added optimisation changes
+    - Made mobile support better
+    - Made the code a bit more readable
+    - Added raccoon clicker
+    - Added mute music button
