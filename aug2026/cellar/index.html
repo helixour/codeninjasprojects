@@ -2,9 +2,16 @@
 <html>
     <head>
         <title>The Cellar</title>
+
         <link rel="icon" type="image/png" href="cellardoor.png">
         <link rel="stylesheet" href="style.css">
+
+        <audio id="mainMusic" autoplay loop>
+            <source src="sneaky_ahh_beat.mp3" type="audio/mpeg">
+        </audio>
+        
         <script src="script.js"></script>
+
         <meta charset="UTF-8">
         <meta name="description" content="The Cellar - Michael's awesome website">
         <meta name="keywords" content="raccoon, michael, helixour">
@@ -94,6 +101,7 @@
         <div class="containerdiv">
             <div id="music" class="section">
                 <img id="disc" src="sneaky_disk.png" alt="a rotating disk">
+                
                 <div id="musicinfo">
                     <p id="playing">Now Playing</p>
                     <h3>Sneaky Ahh Beat</h3>
@@ -114,7 +122,7 @@
 
                         <a href="https://x.com/helixour" target="_blank"><img class="social" alt="Twitter/X" src="https://raw.githubusercontent.com/paulrobertlloyd/socialmediaicons/refs/heads/main/twitter-16x16.png"></a>
 
-                        <a href="https://twitch.tv/helixour" target="_blank"><img class="social" alt="Twitch" src="twitch.png"></a>
+                        <a href="https://twitch.tv/helixour" target="_blank"><img class="social" alt="Twitch" src="../twitch.png"></a>
 
                         <a href="https://github.com/helixour" target="_blank"><img class="social" alt="GitHub" src="https://raw.githubusercontent.com/paulrobertlloyd/socialmediaicons/refs/heads/main/github-16x16.png"></a>
                         
@@ -126,16 +134,14 @@
 
                         <a href="https://helixour.github.io/" target="_blank"><img class="social" alt="Website" src="https://raw.githubusercontent.com/paulrobertlloyd/socialmediaicons/refs/heads/main/website-16x16.png"></a>
 
-                        <audio autoplay loop>
-                            <source src="sneaky_ahh_beat.mp3" type="audio/mpeg">
-                        </audio>
-
                     </footer>
                 </center>
             </div>
         </div>
 
-        <a id="door" style="color: white;" href="../index.html"><img id="doorimg" src="cellardoor.png"></a>
+        <a id="door" style="color: white;" href="../index.html"><img id="doorimg" src="../cellardoor.png"></a>
+
+        <a id="mute" onclick="mute()"><img src="../playing.png"></a>
 
     </body>
 </html>
