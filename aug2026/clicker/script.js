@@ -4,15 +4,65 @@ var squishSound = document.getElementById("squishSfx");
 var buzzer = document.getElementById("buzzer");
 var tada = document.getElementById("tada");
 
-var score = 0;
+// persistence
 
-var upgradeAmount = 50;
-var multi = 2;
-var clickNum = 1;
+var score;
 
-var autoUpgradeAmount = 20;
-var autoClicks = 0.1;
-var clickStart = false;
+if (!localStorage.score) {
+    score = 0;
+} else {
+    score = Number(localStorage.score);
+    document.getElementById("score").innerHTML = score;
+}
+
+var upgradeAmount;
+
+if (!localStorage.upgradeAmount) {
+    upgradeAmount = 50;
+} else {
+    upgradeAmount = Number(localStorage.upgradeAmount);
+}
+
+var multi;
+
+if (!localStorage.multi) {
+    multi = 1;
+} else {
+    multi = Number(localStorage.multi);
+    document.getElementById("upgrade").innerHTML = 'x' + multi + ' Upgrade:<br>' + upgradeAmount + ' Clicks';
+}
+
+var clickNum;
+
+if (!localStorage.clickNum) {
+    clickNum = 1;
+} else {
+    clickNum = Number(localStorage.clickNum);
+}
+
+var autoUpgradeAmount;
+
+if (!localStorage.autoUpgradeAmount) {
+    autoUpgradeAmount = 20;
+} else {
+    autoUpgradeAmount = Number(localStorage.autoUpgradeAmount);
+}
+
+var autoClicks;
+
+if (!localStorage.autoClicks) {
+    autoClicks = 0.1;
+} else {
+    autoClicks = Number(localStorage.autoClicks);
+    document.getElementById("auto").innerHTML = autoClicks * 2  + ' clicks per 1 sec:<br>' + autoUpgradeAmount + ' Clicks';
+}
+
+var clickStart = localStorage.clickStart === 'true';
+if (clickStart) { 
+    autoClick()
+}
+
+// functions
 
 function point() {
     upgradeScore(clickNum);
@@ -29,9 +79,16 @@ function upgrade() {
     if (score >= upgradeAmount) {
         upgradeScore(-upgradeAmount)
         tada.play();
+
         upgradeAmount *= 2;
+        localStorage.upgradeAmount = upgradeAmount
+
         clickNum *= 2
+        localStorage.clickNum = clickNum
+
         multi *= 2
+        localStorage.multi = multi
+
         document.getElementById("upgrade").innerHTML = 'x' + multi + ' Upgrade:<br>' + upgradeAmount + ' Clicks';
     } else {
         buzzer.play();
@@ -43,14 +100,17 @@ function autoUpgrade() {
         if (!clickStart) {
             autoClick()
             clickStart = true;
+            localStorage.clickStart = clickStart
         } else {
             autoClicks *= 2
+            localStorage.autoClicks = autoClicks
         }
         
         tada.play();
         
         upgradeScore(-autoUpgradeAmount)
         autoUpgradeAmount *= 2
+        localStorage.autoUpgradeAmount = autoUpgradeAmount
         document.getElementById("auto").innerHTML = autoClicks * 2  + ' clicks per 1 sec:<br>' + autoUpgradeAmount + ' Clicks';
     } else {
         buzzer.play();
@@ -66,6 +126,7 @@ function autoClick() {
 function upgradeScore(num) {
     score += num
     score = Math.round(score * 10) / 10
+    localStorage.score = score
     document.getElementById("score").innerHTML = score;
 }
 
