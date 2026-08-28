@@ -1,3 +1,5 @@
+alert("WARNING: This game may be glitchy");
+
 var squishSound = document.getElementById("squishSfx");
 var buzzer = document.getElementById("buzzer");
 var tada = document.getElementById("tada");
@@ -11,11 +13,6 @@ var clickNum = 1;
 var autoUpgradeAmount = 20;
 var autoClicks = 0.1;
 var clickStart = false;
-
-if (window.matchMedia("(max-width: 750px)").matches) {
-    alert("Your device is not supported.")
-    location.replace("../index.html")
-}
 
 function point() {
     upgradeScore(clickNum);

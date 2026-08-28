@@ -71,10 +71,6 @@ body {
     #raccoon {
         width: 75%;
     }
-    body {
-        background-size: cover;
-        
-    }
 }
 
 @media (max-width: 638.4px) {
