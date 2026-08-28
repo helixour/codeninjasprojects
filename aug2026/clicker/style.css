@@ -15,7 +15,56 @@ body {
 }
 
 #raccoon {
+    width: 100%;
+    height: 100%;
+    animation: click 250ms ease;
     transition: 250ms;
+}
+
+@keyframes click {
+    0% {
+        transform: scale(100%) rotate(-5deg);
+    }
+    12.5% {
+        transform: scale(50%) rotate(-5deg);
+    }
+    25% {
+        transform: scale(25%) rotate(-5deg);
+    }
+    50% {
+        transform: scale(50%) rotate(-5deg);
+    }
+    75% {
+        transform: scale(125%) rotate(-5deg);
+    }
+    100% {
+        transform: scale(100%) rotate(-5deg);
+    }
+}
+
+#raccoonimg {
+    transition: 250ms;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#raccoondiv {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+}
+
+#scorebox {
+    position: fixed;
+    right: 5px;
+    top: 5px;
 }
 
 @media (max-width: 750px) {
@@ -68,4 +117,38 @@ body {
 
 #arrow:hover {
     transform: scale(110%) rotate(-370deg);
+}
+
+#upgrade {
+    width: auto;
+    height: 90.8667px;
+    position: fixed;
+    top: 105px;
+    right: 5px;
+    transition: 250ms;
+
+    font-family: myFont;
+    color: white;
+    text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
+    font-size: x-large;
+}
+
+#auto {
+    width: auto;
+    height: 90.8667px;
+    position: fixed;
+    top: 205px;
+    right: 5px;
+    transition: 250ms;
+
+    font-family: myFont;
+    color: white;
+    text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
+    font-size: x-large;
+}
+
+#cpsbox {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
 }

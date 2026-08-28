@@ -3,11 +3,19 @@
     <head>
         <title>Raccoon Clicker</title>
 
-        <link rel="icon" type="image/png" href="https://helixour.github.io/index_files/rockin%20raccoon%20pfp.png">
+        <link rel="icon" type="image/png" href="raccoon.png">
         <link rel="stylesheet" href="style.css">
 
         <audio id="squishSfx">
             <source src="../squish.mp3" type="audio/mpeg">
+        </audio>
+
+        <audio id="buzzer">
+            <source src="no.mp3" type="audio/mpeg">
+        </audio>
+
+        <audio id="tada">
+            <source src="tada.mp3" type="audio/mpeg">
         </audio>
 
         <script src="script.js"></script>
@@ -23,15 +31,23 @@
 
         <a href="../index.html"><img id="arrow" src="arrow.png"></a>
 
-        <center>
-            <img onclick="point()" id="raccoon" src="raccoon.png">
-        </center>
+        <div id="scorebox" class="section">
+            <h1 id="score">0</h1>
+        </div>
 
-        <div class="containerdiv">
-            <div class="section">
-                <h1 id="score">0</h1>
+        <div id="cpsbox" class="section">
+            <h1 id="cps">0 CPS</h1>
+        </div>
+        
+        <div id="raccoondiv">
+            <div id="raccoonimg">
+                <img onclick="point()" id="raccoon" src="raccoon.png">
             </div>
         </div>
+
+        <button onclick="upgrade()" class="section" id="upgrade">x2 Upgrade:<br>50 Clicks</button>
+        <button onclick="autoUpgrade()" class="section" id="auto">0.1 clicks per 1 sec:<br>20 Clicks</button>
+
     </body>
 
 </html>
