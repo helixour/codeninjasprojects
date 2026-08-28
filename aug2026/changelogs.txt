@@ -5,3 +5,6 @@ Day 4:
     - Made the code a bit more readable
     - Added raccoon clicker
     - Added mute music button
+
+Day 5 (the big day):
+    - Added upgrades, sfx, and a CPS counter to Raccoon Clicker
