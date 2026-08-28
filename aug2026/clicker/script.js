@@ -1,3 +1,5 @@
+alert("WARNING: This game may be glitchy!")
+
 var squishSound = document.getElementById("squishSfx");
 var buzzer = document.getElementById("buzzer");
 var tada = document.getElementById("tada");
