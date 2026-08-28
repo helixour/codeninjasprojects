@@ -17,7 +17,6 @@ var clickStart = false;
 function point() {
     upgradeScore(clickNum);
     document.getElementById("raccoon").outerHTML = '<img onclick="point()" id="raccoon" src="raccoon.png">';
-    document.getElementById("score").innerHTML = score;
     squishSound.cloneNode(true).play();
     document.getElementById("raccoon").outerHTML = '<img onclick="point()" id="raccoon" src="raccoon.png">';
 }
@@ -27,9 +26,8 @@ function debug() {
 }
 
 function upgrade() {
-    if (score >= upgradeAmount) {
+    if (score >= upgradeAmount *2) {
         upgradeScore(-upgradeAmount)
-        document.getElementById("score").innerHTML = score;
         tada.play();
         upgradeAmount *= 2;
         clickNum *= 2
@@ -45,16 +43,15 @@ function autoUpgrade() {
         if (!clickStart) {
             autoClick()
             clickStart = true;
-            autoUpgradeAmount *2
         } else {
             autoClicks *= 2
-            autoUpgradeAmount *= 2
         }
         
         tada.play();
-        document.getElementById("auto").innerHTML = autoClicks * 2  + ' clicks per 1 sec:<br>' + autoUpgradeAmount * 2 + ' Clicks';
+        
         upgradeScore(-autoUpgradeAmount)
-        document.getElementById("score").innerHTML = score;
+        autoUpgradeAmount *= 2
+        document.getElementById("auto").innerHTML = autoClicks * 2  + ' clicks per 1 sec:<br>' + autoUpgradeAmount + ' Clicks';
     } else {
         buzzer.play();
     }  
@@ -62,15 +59,14 @@ function autoUpgrade() {
 
 function autoClick() {
     var interval = setInterval(function() {
-        score += autoClicks
-        score = Math.round(score * 10) / 10
-        document.getElementById("score").innerHTML = score;
+        upgradeScore(autoClicks)
     }, 1000)
 }
 
 function upgradeScore(num) {
     score += num
     score = Math.round(score * 10) / 10
+    document.getElementById("score").innerHTML = score;
 }
 
 // cps calculating
