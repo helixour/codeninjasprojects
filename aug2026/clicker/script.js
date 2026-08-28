@@ -89,7 +89,7 @@ window.onclick = function() {
     cps++;
     updateCPS()
 
-    if (cps > 25) {
+    if (cps >= 20) {
         location.replace("https://www.youtube.com/watch?v=xvFZjo5PgG0")
         alert("YOU CHEATER")
     }
