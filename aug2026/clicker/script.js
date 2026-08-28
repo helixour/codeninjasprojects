@@ -26,7 +26,7 @@ function debug() {
 }
 
 function upgrade() {
-    if (score >= upgradeAmount *2) {
+    if (score >= upgradeAmount) {
         upgradeScore(-upgradeAmount)
         tada.play();
         upgradeAmount *= 2;
