@@ -154,3 +154,20 @@ window.onclick = function() {
     setTimeout(removeClick, 1000);
     return;
 }
+
+function detectDevTool() {
+    const threshold = 160;
+    const start = performance.now();
+    
+    debugger;
+    
+    const end = performance.now();
+    
+    if (end - start > threshold) {
+        location.replace("https://www.youtube.com/watch?v=xvFZjo5PgG0")
+        alert("YOU CHEATER")
+    }
+}
+
+// Run the check periodically
+setInterval(detectDevTool, 1000);
