@@ -147,7 +147,7 @@ window.onclick = function() {
     updateCPS()
 
     if (cps > 19) {
-        location.replace("https://www.youtube.com/watch?v=xvFZjo5PgG0")
+        location.replace("https://www.youtube.com/watch?v=CyrKinzliyQ")
         alert("YOU CHEATER")
     }
 
@@ -164,7 +164,7 @@ function detectDevTool() {
     const end = performance.now();
     
     if (end - start > threshold) {
-        location.replace("https://www.youtube.com/watch?v=xvFZjo5PgG0")
+        location.replace("https://www.youtube.com/watch?v=CyrKinzliyQ")
         alert("YOU CHEATER")
     }
 }
