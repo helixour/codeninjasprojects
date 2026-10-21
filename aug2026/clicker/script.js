@@ -148,26 +148,23 @@ window.onclick = function() {
 
     if (cps > 19) {
         location.replace("https://www.youtube.com/watch?v=CyrKinzliyQ")
-        alert("YOU CHEATER")
     }
 
     setTimeout(removeClick, 1000);
     return;
 }
 
-function detectDevTool() {
-    const threshold = 160;
-    const start = performance.now();
-    
-    debugger;
-    
-    const end = performance.now();
-    
-    if (end - start > threshold) {
-        location.replace("https://www.youtube.com/watch?v=CyrKinzliyQ")
-        alert("YOU CHEATER")
-    }
-}
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
 
-// Run the check periodically
-setInterval(detectDevTool, 1000);
+document.addEventListener('keydown', function(e) {
+    if (
+        e.key === 'F12' || 
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || 
+        (e.ctrlKey && e.key === 'U')
+    ) {
+        e.preventDefault();
+        window.location.href = "https://www.youtube.com/watch?v=CyrKinzliyQ";
+    }
+});
